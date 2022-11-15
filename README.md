@@ -4,6 +4,7 @@ The application replaces Unicode characters with superficially identical charact
 
 ## Supported Languages
 
+* English
 * Russian
 
 ## Usage

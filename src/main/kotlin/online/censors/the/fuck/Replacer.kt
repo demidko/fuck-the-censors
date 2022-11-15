@@ -6,15 +6,23 @@ class Replacer(vararg replace: Pair<Char, Char>) {
 
   init {
     // todo checkCyrillic()
+    // todo checkEnglish()
   }
 
-  private fun checkCyrillic() {
-    val capitalLetters = 'А'..'Я'
-    check(capitalLetters.count() == 32)
-    val smallLetters = 'а'..'я'
-    check(smallLetters.count() == 32)
-    for (x in capitalLetters + smallLetters) {
-      check(replace(x) != x) { "Replacement $x not found" }
+  private fun checkEnglish() {
+    checkAlphabet('A'..'Z', 26)
+    checkAlphabet('a'..'z', 26)
+  }
+
+  private fun checkRussian() {
+    checkAlphabet('А'..'Я', 32)
+    checkAlphabet('а'..'я', 32)
+  }
+
+  private fun checkAlphabet(alphabet: CharRange, count: Int) {
+    check(alphabet.count() == count)
+    for (letter in alphabet) {
+      check(replace(letter) != letter) { "Replacement $letter not found" }
     }
   }
 
