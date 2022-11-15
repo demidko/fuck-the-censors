@@ -14,6 +14,7 @@ class App {
   @Bean
   fun replacer(): Replacer {
     return Replacer(
+      'А' to 'A',
       'а' to 'a',
       'б' to '?',
     )
