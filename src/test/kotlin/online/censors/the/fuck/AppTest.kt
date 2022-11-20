@@ -12,7 +12,7 @@ class AppTest {
   private lateinit var api: Api
 
   @Test
-  fun testReplace() {
+  fun testApi() {
     assertThat(api.obfuscate("Текст")).isNotEqualTo("Текст")
     assertThat(api.obfuscate("Text")).isNotEqualTo("Text")
     assertThat(api.obfuscate("Слово")).isNotEqualTo("Слово")
