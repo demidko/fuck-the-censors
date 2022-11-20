@@ -1,4 +1,4 @@
-package online.censors.the.fuck
+package online.fuckthecensors
 
 import org.slf4j.LoggerFactory.getLogger
 

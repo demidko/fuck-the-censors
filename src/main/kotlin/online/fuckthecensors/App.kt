@@ -1,4 +1,4 @@
-package online.censors.the.fuck
+package online.fuckthecensors
 
 import org.springframework.boot.SpringBootConfiguration
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
