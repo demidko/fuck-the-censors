@@ -22,7 +22,7 @@ dependencies {
 }
 tasks.withType<KotlinCompile> {
   kotlinOptions.jvmTarget = "17"
-  kotlinOptions.freeCompilerArgs += listOf("-opt-in=kotlin.time.ExperimentalTime", "-Xjsr305=strict")
+  kotlinOptions.freeCompilerArgs += listOf("-Xjsr305=strict")
 }
 tasks.test {
   useJUnitPlatform()
