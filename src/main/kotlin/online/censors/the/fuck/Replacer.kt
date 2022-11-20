@@ -14,9 +14,9 @@ class Replacer(vararg replace: Pair<Char, Char>) {
   private fun checkAlphabet(name: String, count: Int, vararg alphabet: CharRange) {
     alphabet.all { it.count() == count }.run(::check)
     val log = getLogger(javaClass)
-    for (letterIdx in 0 until count) {
-      for (letterSet in alphabet) {
-        val letter = letterSet.elementAt(letterIdx)
+    for (idx in 0 until count) {
+      for (set in alphabet) {
+        val letter = set.elementAt(idx)
         if (replaced(letter) == letter) {
           log.warn("Replacement '$letter' ($name) not found")
         }

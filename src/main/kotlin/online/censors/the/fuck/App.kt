@@ -12,9 +12,6 @@ import org.springframework.scheduling.annotation.EnableScheduling
 class App {
 
   @Bean
-  fun api() = Api(replacer())
-
-  @Bean
   fun replacer() = Replacer(
 
     // Russian
@@ -141,6 +138,9 @@ class App {
     'Z' to 'Ζ',
     'z' to 'ᴢ'
   )
+
+  @Bean
+  fun api() = Api(replacer())
 }
 
 fun main(args: Array<String>) {
