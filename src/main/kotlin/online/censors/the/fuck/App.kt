@@ -12,7 +12,13 @@ import org.springframework.scheduling.annotation.EnableScheduling
 class App {
 
   @Bean
+  fun api() = Api(replacer())
+
+  @Bean
   fun replacer() = Replacer(
+
+    // Russian
+
     'А' to 'A',
     'а' to 'a',
     'Б' to 'Ƃ',
@@ -65,15 +71,76 @@ class App {
     'ч' to 'ɥ',
     'Ш' to 'Ш',
     'ш' to 'ꟺ',
-    'Щ' to 'щ',
+    'Щ' to 'Щ',
     'щ' to 'щ',
     'Ъ' to 'Ⴆ',
     'ъ' to 'ъ',
+    'Ы' to 'Ы',
+    'ы' to 'ы',
+    'Ь' to 'ߕ',
+    'ь' to 'ხ',
+    'Э' to '℈',
+    'э' to '϶',
+    'Ю' to 'Ю',
+    'ю' to 'ю',
+    'Я' to 'ᖆ',
+    'я' to 'ᴙ',
+
+    // English
+
+    'A' to 'А',
+    'a' to 'а',
+    'B' to 'В',
+    'b' to 'ᖯ',
+    'C' to 'С',
+    'c' to 'с',
+    'D' to 'Ⅾ',
+    'd' to 'ⅾ',
+    'E' to 'Е',
+    'e' to 'е',
+    'F' to 'ᖴ',
+    'f' to 'ｆ',
+    'G' to 'Ꮐ',
+    'g' to 'ɡ',
+    'H' to 'Н',
+    'h' to 'һ',
+    'I' to 'Ι',
+    'i' to 'і',
+    'J' to 'Ј',
+    'j' to 'ϳ',
+    'K' to 'К',
+    'k' to 'ｋ',
+    'L' to 'Ꮮ',
+    'l' to 'ⅼ',
+    'M' to 'М',
+    'm' to 'ⅿ',
+    'N' to 'Ν',
+    'n' to 'ᥒ',
+    'O' to 'О',
+    'o' to 'о',
+    'P' to 'Р',
+    'p' to 'р',
+    'Q' to 'Ԛ',
+    'q' to 'ｑ',
+    'R' to 'Ꭱ',
+    'r' to 'ｒ',
+    'S' to 'Ѕ',
+    's' to 'ѕ',
+    'T' to 'Т',
+    't' to 'ｔ',
+    'U' to 'Ｕ',
+    'u' to 'ᥙ',
+    'V' to 'Ꮩ',
+    'v' to 'ᴠ',
+    'W' to 'Ꮃ',
+    'w' to 'ᴡ',
+    'X' to 'Х',
+    'x' to 'х',
+    'Y' to 'Υ',
+    'y' to 'у',
+    'Z' to 'Ζ',
+    'z' to 'ᴢ'
   )
-
-
-  @Bean
-  fun api() = Api(replacer())
 }
 
 fun main(args: Array<String>) {

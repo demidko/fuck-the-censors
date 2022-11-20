@@ -1,5 +1,6 @@
 package online.censors.the.fuck
 
+import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -8,10 +9,12 @@ import org.springframework.boot.test.context.SpringBootTest
 class AppTest {
 
   @Autowired
-  private lateinit var replacer: Replacer
+  private lateinit var api: Api
 
   @Test
   fun testReplace() {
-    // todo тут пара слов для примера (больше и не надо, так как Replacer проводит проверки на уровне типа)
+    assertThat(api.obfuscate("Текст")).isNotEqualTo("Текст")
+    assertThat(api.obfuscate("Слово")).isNotEqualTo("Слово")
+    assertThat(api.obfuscate("Цензура")).isNotEqualTo("Цензура")
   }
 }
