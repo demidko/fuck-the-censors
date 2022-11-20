@@ -14,7 +14,10 @@ class AppTest {
   @Test
   fun testReplace() {
     assertThat(api.obfuscate("Текст")).isNotEqualTo("Текст")
+    assertThat(api.obfuscate("Text")).isNotEqualTo("Text")
     assertThat(api.obfuscate("Слово")).isNotEqualTo("Слово")
+    assertThat(api.obfuscate("Word")).isNotEqualTo("Word")
     assertThat(api.obfuscate("Цензура")).isNotEqualTo("Цензура")
+    assertThat(api.obfuscate("Censorship")).isNotEqualTo("Censorship")
   }
 }
