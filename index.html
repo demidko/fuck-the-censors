@@ -13,15 +13,14 @@
 <body>
 <div class="ui container">
   <p>
-  <h1 class="ui center aligned icon header">
+  <div class="ui center aligned icon header">
     <i class="circular grey paste icon"></i>
-  </h1>
-  <div class="ui fluid big form">
-        <textarea placeholder="Paste your text here. Be careful. The obfuscated text will be copied to the clipboard!"
-                  oninput="obfuscate(this)">
-        </textarea>
-    <textarea placeholder="New text will be here" id="result-container" hidden disabled>
-        </textarea>
+  </div>
+  <div class="ui big form">
+    <textarea placeholder="Paste here. The obfuscated text will be copied to the clipboard!" oninput="obfuscate(this)">
+    </textarea>
+    <textarea id="result-container" disabled hidden>
+    </textarea>
   </div>
 </div>
 </body>
