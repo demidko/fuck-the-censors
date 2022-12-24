@@ -12,7 +12,7 @@ window.obfuscateTextarea = async function (textarea) {
   await navigator.clipboard.writeText(resultContainer.value)
   let displayTimeMs = 1000
   let lastNotificationAgo = Date.now() - lastNotificationTimestamp
-  if (lastNotificationAgo > displayTimeMs) {
+  if (lastNotificationAgo > (displayTimeMs * 2)) {
     $.toast({
       displayTime: displayTimeMs,
       class: "success",
