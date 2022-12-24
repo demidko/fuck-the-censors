@@ -14,4 +14,5 @@ function printlnSynchronously(text, caret) {
   container.value = text
   container.hidden = !text;
   container.setSelectionRange(caret.selectionStart, caret.selectionEnd)
+  caret.setSelectionRange(container.selectionStart, container.selectionEnd)
 }
