@@ -125,12 +125,14 @@ const replacements = {
   'z': 'ᴢ'
 }
 
-export function obfuscate(text) {
+function obfuscate(text) {
   let result = ""
-  for(let source of text) {
+  for (let source of text) {
     let replacement = replacements[source]
-    result += replacement? replacement: source
+    result += replacement ? replacement : source
   }
   return result
 }
+
+export {obfuscate};
 
