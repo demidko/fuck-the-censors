@@ -1,24 +1,17 @@
 // noinspection JSUnresolvedFunction
 
-import {obfuscate} from "./replacer.js";
+import {obfuscated} from "./obfuscator.js";
+import {copyToClipboard} from "./clipboard.js";
 
-let lastNotificationTimestamp = 0
+window.obfuscate = async function (textarea) {
+  const text = obfuscated(textarea.value)
+  printlnSynchronously(text, textarea)
+  await copyToClipboard(text)
+}
 
-window.obfuscateTextarea = async function (textarea) {
-  let resultContainer = document.getElementById("result-container")
-  resultContainer.hidden = false
-  resultContainer.value = obfuscate(textarea.value)
-  resultContainer.setSelectionRange(textarea.selectionStart, textarea.selectionEnd)
-  await navigator.clipboard.writeText(resultContainer.value)
-  let displayTimeMs = 1000
-  let lastNotificationAgo = Date.now() - lastNotificationTimestamp
-  if (lastNotificationAgo > (displayTimeMs * 2)) {
-    $.toast({
-      displayTime: displayTimeMs,
-      class: "success",
-      showIcon: "copy",
-      message: "Text copied to clipboard"
-    });
-    lastNotificationTimestamp = Date.now()
-  }
+function printlnSynchronously(text, caret) {
+  const container = document.getElementById("result-container")
+  container.value = text
+  container.hidden = !text;
+  container.setSelectionRange(caret.selectionStart, caret.selectionEnd)
 }

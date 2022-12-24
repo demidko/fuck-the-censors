@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--suppress JSUnresolvedLibraryURL -->
+<!--suppress JSUnresolvedLibraryURL, HtmlFormInputWithoutLabel -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,17 +16,14 @@
   <i class="circular grey paste icon"></i>
 </h1>
 <div class="ui container">
-  <div class="ui center aligned stackable grid">
+  <div class="ui center aligned very compact stackable grid">
     <div class="row"></div>
-    <div class="row">
-      <div class="ui big fluid input">
-        <textarea placeholder="Paste your text here" cols="75" rows="7" oninput="obfuscateTextarea(this)">
+    <div class="sixteen wide column">
+      <div class="ui fluid big form">
+        <textarea placeholder="Paste your text here. Be careful. The obfuscated text will be copied to the clipboard!"
+                  oninput="obfuscate(this)">
         </textarea>
-      </div>
-    </div>
-    <div class="row">
-      <div class="ui big fluid input">
-        <textarea disabled cols="75" rows="7" id="result-container" hidden>
+        <textarea placeholder="New text will be here" id="result-container" hidden disabled>
         </textarea>
       </div>
     </div>

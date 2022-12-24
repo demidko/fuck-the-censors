@@ -1,7 +1,7 @@
-export function obfuscate(text) {
+export function obfuscated(text) {
   let result = ""
-  for (let source of text) {
-    let replacement = replacements[source]
+  for (const source of text) {
+    const replacement = replacements[source]
     result += replacement ? replacement : source
   }
   return result
