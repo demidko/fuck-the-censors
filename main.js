@@ -12,6 +12,6 @@ window.obfuscateTextarea = async function (textarea) {
   $.toast({
     class: "success",
     showIcon: "copy",
-    message: "Новый текст скопирован в буфер обмена"
+    message: "Text copied to clipboard"
   });
 }
