@@ -17,14 +17,10 @@
     <i class="circular grey paste icon"></i>
   </h1>
   <div class="ui big form">
-    <textarea placeholder="Paste here. The obfuscated text will be copied to the clipboard!" oninput="obfuscate(this)">
-    </textarea>
-    <textarea id="result-container" disabled hidden>
-    </textarea>
+    <textarea placeholder="Paste here. The obfuscated text will be copied to the clipboard!"
+              oninput="obfuscate(this)"></textarea>
+    <textarea id="result-container" disabled hidden></textarea>
   </div>
 </div>
 </body>
-<script>
-  document.getElementsByTagName("textarea").item(0).value = ""
-</script>
 </html>
