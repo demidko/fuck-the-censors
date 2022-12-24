@@ -11,16 +11,18 @@
   <script type="module" src="main.js"></script>
 </head>
 <body>
-<p>
-<h1 class="ui center aligned icon header">
-  <i class="circular grey paste icon"></i>
-</h1>
-<div class="ui center aligned fluid big form">
-  <textarea placeholder="Paste your text here. Be careful. The obfuscated text will be copied to the clipboard!"
-            oninput="obfuscate(this)">
-  </textarea>
-  <textarea placeholder="New text will be here" id="result-container" hidden disabled>
-  </textarea>
+<div class="ui container">
+  <p>
+  <h1 class="ui center aligned icon header">
+    <i class="circular grey paste icon"></i>
+  </h1>
+  <div class="ui fluid big form">
+        <textarea placeholder="Paste your text here. Be careful. The obfuscated text will be copied to the clipboard!"
+                  oninput="obfuscate(this)">
+        </textarea>
+    <textarea placeholder="New text will be here" id="result-container" hidden disabled>
+        </textarea>
+  </div>
 </div>
 </body>
 </html>
