@@ -11,11 +11,11 @@
   <script type="module" src="main.js"></script>
 </head>
 <body>
-<div class="ui container">
+<div class="ui four wide container">
   <p>
-  <div class="ui center aligned icon header">
+  <h1 class="ui center aligned icon header">
     <i class="circular grey paste icon"></i>
-  </div>
+  </h1>
   <div class="ui big form">
     <textarea placeholder="Paste here. The obfuscated text will be copied to the clipboard!" oninput="obfuscate(this)">
     </textarea>
@@ -24,4 +24,7 @@
   </div>
 </div>
 </body>
+<script>
+  document.getElementsByTagName("textarea").item(0).value = ""
+</script>
 </html>
