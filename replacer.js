@@ -1,3 +1,12 @@
+export function obfuscate(text) {
+  let result = ""
+  for (let source of text) {
+    let replacement = replacements[source]
+    result += replacement ? replacement : source
+  }
+  return result
+}
+
 const replacements = {
 
   // Russian
@@ -124,15 +133,4 @@ const replacements = {
   'Z': 'Ζ',
   'z': 'ᴢ'
 }
-
-function obfuscate(text) {
-  let result = ""
-  for (let source of text) {
-    let replacement = replacements[source]
-    result += replacement ? replacement : source
-  }
-  return result
-}
-
-export {obfuscate};
 
