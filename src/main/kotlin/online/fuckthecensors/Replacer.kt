@@ -24,7 +24,9 @@ class Replacer(vararg replace: Pair<Char, Char>) {
     }
   }
 
-  private fun replaced(c: Char) = replacements[c] ?: c
+  private fun replaced(c: Char): Char {
+    return replacements[c] ?: c
+  }
 
   fun obfuscate(text: String) = buildString {
     for (l in text) {

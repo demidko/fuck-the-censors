@@ -1,14 +1,10 @@
 package online.fuckthecensors
 
-import org.springframework.boot.SpringBootConfiguration
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration
+import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
-import org.springframework.scheduling.annotation.EnableScheduling
 
-@EnableScheduling
-@SpringBootConfiguration
-@EnableAutoConfiguration
+@SpringBootApplication
 class App {
 
   @Bean
@@ -138,9 +134,6 @@ class App {
     'Z' to 'Ζ',
     'z' to 'ᴢ'
   )
-
-  @Bean
-  fun api() = Api(replacer())
 }
 
 fun main(args: Array<String>) {
