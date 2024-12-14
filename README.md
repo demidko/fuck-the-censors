@@ -6,7 +6,7 @@ in terms of Unicode.
 
 ## upd. 2024-12-14
 
-Support for the project has been discontinued. The project will continue to operate in its current state indefinitely. However, I recommend using higher-quality analogues for the Russian language, for example https://textshrift.ru/
+Support for the project has been discontinued. The website will continue to operate in its current state indefinitely. However, I recommend using higher-quality analogues for the Russian language, for example https://textshrift.ru/
 
 ## Usage
 
